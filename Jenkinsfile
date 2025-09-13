@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS 18.x"
+        nodejs "NodeJS 20" // updated Node version
     }
 
     stages {
@@ -33,7 +33,8 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 dir('todo-app/frontend') {
-                    sh 'npm run build'
+                    sh 'chmod +x node_modules/.bin/react-scripts'  // fix permissions
+                    sh 'npx react-scripts build'                    // use npx to ensure proper binary
                 }
             }
         }
