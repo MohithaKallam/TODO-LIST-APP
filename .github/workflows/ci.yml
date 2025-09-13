@@ -26,18 +26,32 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       # Step 3: Install & Test Backend (Express)
+      - name: Cache backend node_modules
+        uses: actions/cache@v3
+        with:
+          path: todo-app/backend/node_modules
+          key: backend-${{ runner.os }}-node-${{ matrix.node-version }}
+          restore-keys: backend-${{ runner.os }}-node-
+
       - name: Install backend dependencies
         working-directory: todo-app/backend
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Run backend tests
         working-directory: todo-app/backend
         run: npm test || echo "No backend tests found"
 
       # Step 4: Install & Test Frontend (React)
+      - name: Cache frontend node_modules
+        uses: actions/cache@v3
+        with:
+          path: todo-app/frontend/node_modules
+          key: frontend-${{ runner.os }}-node-${{ matrix.node-version }}
+          restore-keys: frontend-${{ runner.os }}-node-
+
       - name: Install frontend dependencies
         working-directory: todo-app/frontend
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Run frontend tests
         working-directory: todo-app/frontend
