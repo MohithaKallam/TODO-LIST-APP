@@ -1,0 +1,103 @@
+.landing-page {
+  height: 100vh;
+  background-image: url('../images/todo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.overlay {
+background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.cta-button {
+  background-color: hsl(246, 43%, 77%);
+  color:black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none; 
+}
+
+.cta-button:hover,
+.cta-button:focus,
+.cta-button:active {
+  background-color: orangered !important; 
+  outline: none; 
+}
+
+.nav-bar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: maroon;
+}
+
+.animated-gradient-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, red , purple, rebeccapurple, maroon);
+  background-size: 600% 600%;
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 8s ease infinite;
+  text-align: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

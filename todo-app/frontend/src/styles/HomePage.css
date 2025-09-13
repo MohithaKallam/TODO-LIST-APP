@@ -1,0 +1,150 @@
+body.home {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  background-image: url('../images/home.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* or contain */
+  background-position: center center;
+}
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('../images/home.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+
+}
+
+
+.auth-links {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 20px; 
+  transition: color 0.2s;
+}
+
+.auth-link:hover {
+  color: #0077cc;
+}
+
+.auth-links {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 16px; 
+  font-family: sans-serif; 
+}
+
+.auth-link.signup,
+.auth-link.signin {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: black; 
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 25px; 
+   transition: color 0.2s ease; 
+}
+
+.auth-link.signup:hover,
+.auth-link.signin:hover {
+  color: #005999; 
+}
+
+.homepage-main {
+  flex: 1;
+  padding: 60px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #555;
+}
+
+.features-section {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.features-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.features-list li::before {
+  content: '•';
+  color: #0077cc;
+  position: absolute;
+  left: 0;
+}
+
+.cta-section {
+  margin-top: 60px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.get-started-button {
+  all:unset;
+   display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  background-color: purple;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.get-started-button:hover {
+  background-color: #005fa3;
+}
