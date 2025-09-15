@@ -1,14 +1,13 @@
-version: "3.9"
 services:
   backend:
-    build: ./backend
+    build: ./todo-app/backend
     container_name: todo-backend
     ports:
       - "5000:5000"
     restart: always
 
   frontend:
-    build: ./frontend
+    build: ./todo-app/frontend
     container_name: todo-frontend
     ports:
       - "3000:80"
