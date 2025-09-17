@@ -1,4 +1,7 @@
-com\todo\utils\MongoHelper.class
+com\todo\selenium\SignUpTest.class
+com\todo\utils\SlowHelper.class
 com\todo\selenium\AppTest.class
 com\todo\selenium\SignInTest.class
 com\todo\selenium\BaseTest.class
+com\todo\selenium\HomePageTest.class
+com\todo\utils\MongoHelper.class

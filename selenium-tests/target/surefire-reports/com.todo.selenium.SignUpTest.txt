@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.todo.selenium.SignInTest
+Test set: com.todo.selenium.SignUpTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.825 s -- in com.todo.selenium.SignInTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.674 s -- in com.todo.selenium.SignUpTest
